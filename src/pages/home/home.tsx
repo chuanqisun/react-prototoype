@@ -6,7 +6,7 @@ export const Home: React.FC = () => {
   return (
     <StyledAppRoot>
       <h1>Home</h1>
-      <Link to="details">Details</Link>
+      <Link to="/details">Details</Link>
     </StyledAppRoot>
   );
 };
