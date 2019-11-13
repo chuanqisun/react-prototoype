@@ -35,30 +35,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
-    publicPath: '/',
-    chunkFilename: '[name].[chunkhash].js',
-  },
   optimization: {
     splitChunks: {
-      cacheGroups: {
-        react: {
-          chunks: 'all',
-          enforce: true,
-          filename: 'react.[chunkhash].js',
-          name: false,
-          test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|use-react-router)[\\/]/,
-        },
-        styled: {
-          chunks: 'all',
-          enforce: true,
-          filename: 'styled-components.[chunkhash].js',
-          name: false,
-          test: /[\\/]node_modules[\\/](styled-components)[\\/]/,
-        },
-      },
+      chunks: 'all',
     },
   },
   plugins: [htmlWebpackPlugin],

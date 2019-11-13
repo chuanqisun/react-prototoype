@@ -5,5 +5,5 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'production',
-  plugins: [new CleanWebpackPlugin(), new CopyPlugin(['netlify.toml'])],
+  plugins: [new CleanWebpackPlugin(), new CopyPlugin([{ from: 'server-config' }], { flatten: true })],
 });
