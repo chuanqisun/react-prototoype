@@ -41,4 +41,7 @@ module.exports = {
     },
   },
   plugins: [htmlWebpackPlugin],
+  output: {
+    publicPath: '/' /* SPA subroute need to use absolute url to locate resources */,
+  },
 };
